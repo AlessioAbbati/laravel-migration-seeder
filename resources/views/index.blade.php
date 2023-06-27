@@ -31,6 +31,8 @@
                         <th>Data di partenza</th>
                         <th>Arrivo a</th>
                         <th>Data di arrivo</th>
+                        <th>In orario</th>
+                        <th>Cancellato</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +43,8 @@
                             <td>{{ $train->departure_date }}</td>
                             <td>{{ $train->arrival_station }}</td>
                             <td>{{ $train->arrival_date }}</td>
+                            <td>{{ $train->on_time }}</td>
+                            <td>{{ $train->deleted }}</td>
                         </tr>
                     @endforeach
                 </tbody>
