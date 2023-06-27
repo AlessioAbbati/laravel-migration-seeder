@@ -7,7 +7,13 @@
         @vite('resources/js/app.js')
     </head>
     <body>
-        <h1 class="text-center">Ciao da vite</h1>
+        <h1 class="text-center">Treni in partenza</h1>
         {{-- <img src="{{ Vite::asset('resources/img/picsum30.jpg') }}" alt=""> --}}
+
+        <ul>
+            @foreach ($trains as $train)
+                <li>{{ $train->company }}, da: {{ $train->departure_station }}</li>
+            @endforeach
+        </ul>
     </body>
 </html>
