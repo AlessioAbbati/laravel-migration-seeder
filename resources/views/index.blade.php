@@ -26,13 +26,13 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Compagnia del treno</th>
-                        <th>Partenza da</th>
-                        <th>Data di partenza</th>
-                        <th>Arrivo a</th>
-                        <th>Data di arrivo</th>
-                        <th>In orario</th>
-                        <th>Cancellato</th>
+                        <th class="text-danger">Compagnia del treno</th>
+                        <th class="text-danger">Partenza da</th>
+                        <th class="text-danger">Data di partenza</th>
+                        <th class="text-danger">Arrivo a</th>
+                        <th class="text-danger">Data di arrivo</th>
+                        <th class="text-danger">In orario</th>
+                        <th class="text-danger">Cancellato</th>
                     </tr>
                 </thead>
                 <tbody>
