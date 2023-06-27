@@ -12,7 +12,13 @@
 
         <ul>
             @foreach ($trains as $train)
-                <li>{{ $train->company }}, da: {{ $train->departure_station }}</li>
+                <li>compagnia del treno: {{ $train->company }}, 
+                    in partenza da: {{ $train->departure_station }},
+                    del giorno: {{ $train->departure_date }},
+                    in arrivo a: {{ $train->arrival_station }},
+                    del giorno: {{ $train->arrival_date }}
+
+                </li>
             @endforeach
         </ul>
     </body>
