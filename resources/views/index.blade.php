@@ -43,8 +43,8 @@
                             <td>{{ $train->departure_date }}</td>
                             <td>{{ $train->arrival_station }}</td>
                             <td>{{ $train->arrival_date }}</td>
-                            <td>{{ $train->on_time }}</td>
-                            <td>{{ $train->deleted }}</td>
+                            <td>{{ $train->on_time ? 'Si' : 'No' }}</td>
+                            <td>{{ $train->deleted ? 'Si' : 'No' }}</td>
                         </tr>
                     @endforeach
                 </tbody>
