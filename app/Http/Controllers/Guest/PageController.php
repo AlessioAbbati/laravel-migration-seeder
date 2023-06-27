@@ -8,14 +8,26 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
-    public function index() {
-        // filtro 
+    public function index()
+    {
         $trains = Train::all()->filter(function ($train) {
             return !$train->on_time || !$train->deleted;
         });
 
-        return view ('index', [
-            'trains' => $trains
+        $formattedTrains = $trains->map(function ($train) {
+            $train->formatted_departure_date = date('d F Y', strtotime($train->departure_date));
+            $train->formatted_arrival_date = date('d F Y', strtotime($train->arrival_date));
+            return $train;
+        });
+
+        return view('index', [
+            'trains' => $formattedTrains
         ]);
     }
 }
+
+
+
+
+
+
