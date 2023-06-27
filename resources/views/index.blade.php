@@ -10,7 +10,7 @@
         <h1 class="text-center">Treni in partenza</h1>
         {{-- <img src="{{ Vite::asset('resources/img/picsum30.jpg') }}" alt=""> --}}
 
-        <ul>
+        {{-- <ul>
             @foreach ($trains as $train)
                 <li>compagnia del treno: {{ $train->company }}, 
                     in partenza da: {{ $train->departure_station }},
@@ -20,6 +20,33 @@
 
                 </li>
             @endforeach
-        </ul>
+        </ul> --}}
+
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Compagnia del treno</th>
+                        <th>Partenza da</th>
+                        <th>Data di partenza</th>
+                        <th>Arrivo a</th>
+                        <th>Data di arrivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($trains as $train)
+                        <tr>
+                            <td>{{ $train->company }}</td>
+                            <td>{{ $train->departure_station }}</td>
+                            <td>{{ $train->departure_date }}</td>
+                            <td>{{ $train->arrival_station }}</td>
+                            <td>{{ $train->arrival_date }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        
     </body>
 </html>
